@@ -16,15 +16,16 @@
       margin: 0;
       padding: 0;
       width: 100%;
+      min-height: 100%;
       font-family: Arial, sans-serif;
-      background: #f2f2f2;
+      background: #ffffff;
       color: #111;
     }
 
     body {
       padding: 8px;
-      padding-top: env(safe-area-inset-top);
-      padding-bottom: env(safe-area-inset-bottom);
+      padding-top: max(8px, env(safe-area-inset-top));
+      padding-bottom: 8px;
     }
 
     .top-bar {
@@ -88,6 +89,7 @@
     @media (max-width: 650px) {
       body {
         padding: 6px;
+        padding-bottom: 6px;
       }
 
       .top-bar {
