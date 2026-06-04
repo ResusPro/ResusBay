@@ -36,16 +36,16 @@
     .top-bar {
       display: flex;
       align-items: center;
-      gap: 18px;
+      gap: 14px;
       background: linear-gradient(135deg, #003f8c, #1565c0);
       color: white;
       border-radius: 10px;
-      padding: 12px 18px;
+      padding: 10px 16px 12px 16px;
       margin-bottom: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.22);
       flex: 0 0 auto;
-      min-height: 78px;
-      overflow: hidden;
+      min-height: 76px;
+      overflow: visible;
     }
 
     .logo {
@@ -60,17 +60,18 @@
       min-width: 0;
       flex: 1 1 auto;
       display: flex;
-      align-items: center;
+      align-items: baseline;
       gap: 16px;
       white-space: nowrap;
-      overflow: hidden;
+      overflow: visible;
     }
 
     .title {
       font-size: clamp(2rem, 3vw, 3rem);
       font-weight: 900;
-      line-height: 1.15;
+      line-height: 1.28;
       margin: 0;
+      padding-bottom: 2px;
       letter-spacing: -0.03em;
       flex: 0 0 auto;
     }
@@ -79,15 +80,11 @@
       font-size: clamp(0.95rem, 1.2vw, 1.25rem);
       font-weight: 700;
       opacity: 0.96;
-      line-height: 1.35;
+      line-height: 1.2;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
       min-width: 0;
-    }
-
-    .subtitle-mobile {
-      display: none;
     }
 
     .container {
@@ -96,7 +93,7 @@
       min-height: 0;
       margin: 0 auto;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
       overflow: hidden;
       background: white;
@@ -106,23 +103,15 @@
 
     svg {
       display: block;
-      width: auto;
+      width: 100%;
       height: 100%;
       max-width: 100%;
       max-height: 100%;
-      aspect-ratio: 16 / 9;
-      flex: 0 1 auto;
+      flex: 1 1 auto;
     }
 
     rect {
       transition: fill 0.2s;
-    }
-
-    @media (min-aspect-ratio: 16/9) {
-      svg {
-        width: 100%;
-        height: auto;
-      }
     }
 
     @media (max-width: 650px) {
@@ -134,54 +123,47 @@
 
       .top-bar {
         gap: 8px;
-        padding: 8px 10px;
+        padding: 8px 10px 9px 10px;
         margin-bottom: 6px;
         border-radius: 9px;
-        min-height: 66px;
+        min-height: 64px;
       }
 
       .logo {
-        width: clamp(68px, 23vw, 105px);
-        max-width: 25vw;
+        width: clamp(72px, 24vw, 110px);
+        max-width: 26vw;
       }
 
       .title-block {
         display: block;
+        overflow: visible;
       }
 
       .title {
-        font-size: clamp(1.18rem, 6.3vw, 1.75rem);
-        line-height: 1.15;
-        margin-bottom: 1px;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        font-size: clamp(1.45rem, 7vw, 2.15rem);
+        line-height: 1.25;
+        padding-bottom: 1px;
+        overflow: visible;
+        text-overflow: clip;
       }
 
       .subtitle {
-        font-size: clamp(0.62rem, 2.9vw, 0.82rem);
-        line-height: 1.25;
-      }
-
-      .subtitle-desktop {
-        display: none;
-      }
-
-      .subtitle-mobile {
-        display: block;
+        font-size: clamp(0.68rem, 3vw, 0.9rem);
+        line-height: 1.15;
       }
     }
 
     @media (max-width: 380px) {
       .logo {
-        width: clamp(58px, 22vw, 84px);
+        width: clamp(62px, 22vw, 88px);
       }
 
       .title {
-        font-size: clamp(1.05rem, 6vw, 1.45rem);
+        font-size: clamp(1.25rem, 6.5vw, 1.65rem);
       }
 
       .subtitle {
-        font-size: clamp(0.58rem, 2.8vw, 0.72rem);
+        font-size: clamp(0.6rem, 2.75vw, 0.76rem);
       }
     }
   </style>
@@ -193,14 +175,13 @@
   <img src="logo-tight.png" alt="ResusPro logo" class="logo">
   <div class="title-block">
     <h1 class="title">ResusBay</h1>
-    <div class="subtitle subtitle-desktop">Interactive equipment guide - click on items to review contents.</div>
-    <div class="subtitle subtitle-mobile">Tap items to review contents.</div>
+    <div class="subtitle">Interactive equipment guide - click on items to review contents.</div>
   </div>
 </header>
 
 <div class="container">
 
-  <svg viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid meet">
+  <svg viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMin meet">
 
     <image href="bay1.jpeg" width="1920" height="1080" x="0" y="0" />
 
