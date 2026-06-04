@@ -58,17 +58,20 @@
     .title-block {
       min-width: 0;
       flex: 1 1 auto;
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      white-space: nowrap;
+      overflow: hidden;
     }
 
     .title {
       font-size: clamp(1.9rem, 3.2vw, 3rem);
       font-weight: 900;
       line-height: 1;
-      margin: 0 0 4px 0;
+      margin: 0;
       letter-spacing: -0.03em;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      flex: 0 0 auto;
     }
 
     .subtitle {
@@ -79,6 +82,7 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      min-width: 0;
     }
 
     .subtitle-mobile {
@@ -133,9 +137,15 @@
         max-width: 25vw;
       }
 
+      .title-block {
+        display: block;
+      }
+
       .title {
         font-size: clamp(1.18rem, 6.3vw, 1.75rem);
         margin-bottom: 2px;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
 
       .subtitle {
