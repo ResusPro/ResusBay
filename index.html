@@ -1,1 +1,216 @@
-Ticova Ergonomic Office Chair
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1565c0">
+  <title>ResusBay</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      color: #111;
+    }
+
+    body {
+      padding: 8px;
+      padding-top: env(safe-area-inset-top);
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    .top-bar {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      background: linear-gradient(135deg, #003f8c, #1565c0);
+      color: white;
+      border-radius: 10px;
+      padding: 16px 22px;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.22);
+    }
+
+    .logo {
+      width: 190px;
+      max-width: 34vw;
+      height: auto;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .title-block {
+      min-width: 0;
+    }
+
+    .title {
+      font-size: 3rem;
+      font-weight: 900;
+      line-height: 1;
+      margin: 0 0 8px 0;
+      letter-spacing: -0.03em;
+    }
+
+    .subtitle {
+      font-size: 1.25rem;
+      font-weight: 700;
+      opacity: 0.96;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.14);
+    }
+
+    svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    rect {
+      transition: fill 0.2s;
+    }
+
+    @media (max-width: 650px) {
+      body {
+        padding: 6px;
+      }
+
+      .top-bar {
+        gap: 10px;
+        padding: 10px 12px;
+        margin-bottom: 8px;
+      }
+
+      .logo {
+        width: 118px;
+        max-width: 38vw;
+      }
+
+      .title {
+        font-size: 1.9rem;
+        margin-bottom: 4px;
+      }
+
+      .subtitle {
+        font-size: 0.86rem;
+        line-height: 1.15;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .logo {
+        width: 95px;
+      }
+
+      .title {
+        font-size: 1.55rem;
+      }
+
+      .subtitle {
+        font-size: 0.78rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="top-bar">
+  <img src="logo-tight.png" alt="ResusPro logo" class="logo">
+  <div class="title-block">
+    <h1 class="title">ResusBay</h1>
+    <div class="subtitle">Interactive equipment guide - click on items to review contents.</div>
+  </div>
+</header>
+
+<div class="container">
+
+  <svg viewBox="0 0 1920 1080" width="100%" height="100%">
+
+    <image href="bay1.jpeg" width="1920" height="1080" x="0" y="0" />
+
+    <a href="https://tinyurl.com/yjskvhmm" target="_blank" style="cursor: pointer;">
+      <title>Open Bay Checklist</title>
+      <rect x="0" y="0" width="1920" height="1080"
+            fill="transparent" stroke="transparent" stroke-width="1"
+            onmouseover="this.setAttribute('fill', 'rgba(0, 102, 204, 0.15)')"
+            onmouseout="this.setAttribute('fill', 'transparent')" />
+    </a>
+
+    <a href="https://tinyurl.com/4uhh8rra" target="_blank" style="cursor: pointer;">
+      <title>Open Airway and Breathing Trolley Checklist</title>
+      <rect x="288" y="432" width="269" height="324"
+            fill="transparent" stroke="transparent" stroke-width="2"
+            onmouseover="this.setAttribute('fill', 'rgba(0, 102, 204, 0.3)')"
+            onmouseout="this.setAttribute('fill', 'transparent')" />
+    </a>
+
+    <a href="https://tinyurl.com/3ffnt5wy" target="_blank" style="cursor: pointer;">
+      <title>Open Circulation and Monitoring Checklist</title>
+      <rect x="864" y="302" width="192" height="302"
+            fill="transparent" stroke="transparent" stroke-width="2"
+            onmouseover="this.setAttribute('fill', 'rgba(0, 102, 204, 0.3)')"
+            onmouseout="this.setAttribute('fill', 'transparent')" />
+    </a>
+
+    <a href="https://tinyurl.com/yrjvk4u3" target="_blank" style="cursor: pointer;">
+      <title>Open Panda Checklist</title>
+      <rect x="1190" y="162" width="192" height="486"
+            fill="transparent" stroke="transparent" stroke-width="2"
+            onmouseover="this.setAttribute('fill', 'rgba(0, 102, 204, 0.3)')"
+            onmouseout="this.setAttribute('fill', 'transparent')" />
+    </a>
+
+    <a href="https://tinyurl.com/4bufdw3a" target="_blank" style="cursor: pointer;">
+      <title>Open Sideboard Checklist</title>
+      <rect x="1363" y="432" width="557" height="518"
+            fill="transparent" stroke="transparent" stroke-width="2"
+            onmouseover="this.setAttribute('fill', 'rgba(0, 102, 204, 0.3)')"
+            onmouseout="this.setAttribute('fill', 'transparent')" />
+    </a>
+
+    <a href="https://tinyurl.com/mrpt96sz" target="_blank" style="cursor: pointer;">
+      <title>Open HALO Trolley Checklist</title>
+      <rect x="154" y="486" width="76" height="410"
+            fill="transparent" stroke="transparent" stroke-width="2"
+            onmouseover="this.setAttribute('fill', 'rgba(0, 102, 204, 0.3)')"
+            onmouseout="this.setAttribute('fill', 'transparent')" />
+    </a>
+
+    <a href="https://tinyurl.com/mrpt96sz" target="_blank" style="cursor: pointer;">
+      <title>Open HALO Trolley Checklist</title>
+      <rect x="0" y="486" width="192" height="86"
+            fill="transparent" stroke="transparent" stroke-width="2"
+            onmouseover="this.setAttribute('fill', 'rgba(0, 102, 204, 0.3)')"
+            onmouseout="this.setAttribute('fill', 'transparent')" />
+    </a>
+
+    <a href="https://tinyurl.com/472sp57s" target="_blank" style="cursor: pointer;">
+      <title>Open Access Trolley Checklist</title>
+      <rect x="0" y="583" width="154" height="486"
+            fill="transparent" stroke="transparent" stroke-width="2"
+            onmouseover="this.setAttribute('fill', 'rgba(0, 102, 204, 0.3)')"
+            onmouseout="this.setAttribute('fill', 'transparent')" />
+    </a>
+
+  </svg>
+
+</div>
+
+</body>
+</html>
