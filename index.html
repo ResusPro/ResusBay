@@ -18,68 +18,96 @@
       width: 100%;
       min-height: 100%;
       font-family: Arial, sans-serif;
-      background: #ffffff;
+      background: #f2f2f2;
       color: #111;
     }
 
     body {
+      height: 100vh;
+      height: 100svh;
       padding: 8px;
       padding-top: max(8px, env(safe-area-inset-top));
-      padding-bottom: 8px;
+      padding-bottom: max(8px, env(safe-area-inset-bottom));
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
     }
 
     .top-bar {
       display: flex;
       align-items: center;
-      gap: 18px;
+      gap: 16px;
       background: linear-gradient(135deg, #003f8c, #1565c0);
       color: white;
       border-radius: 10px;
-      padding: 16px 22px;
-      margin-bottom: 12px;
+      padding: 12px 18px;
+      margin-bottom: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.22);
+      flex: 0 0 auto;
+      min-width: 0;
     }
 
     .logo {
-      width: 190px;
-      max-width: 34vw;
+      width: clamp(120px, 12vw, 190px);
+      max-width: 30vw;
       height: auto;
       object-fit: contain;
-      flex-shrink: 0;
+      flex: 0 0 auto;
     }
 
     .title-block {
       min-width: 0;
+      flex: 1 1 auto;
     }
 
     .title {
-      font-size: 3rem;
+      font-size: clamp(1.9rem, 3.2vw, 3rem);
       font-weight: 900;
       line-height: 1;
-      margin: 0 0 8px 0;
+      margin: 0 0 4px 0;
       letter-spacing: -0.03em;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .subtitle {
-      font-size: 1.25rem;
+      font-size: clamp(0.82rem, 1.25vw, 1.25rem);
       font-weight: 700;
       opacity: 0.96;
+      line-height: 1.1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .subtitle-mobile {
+      display: none;
     }
 
     .container {
       width: 100%;
       max-width: 100%;
+      flex: 1 1 auto;
+      min-height: 0;
       margin: 0 auto;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      overflow: hidden;
       background: white;
       border-radius: 10px;
-      overflow: hidden;
       box-shadow: 0 2px 8px rgba(0,0,0,0.14);
     }
 
     svg {
       display: block;
-      width: 100%;
-      height: auto;
+      height: 100%;
+      width: auto;
+      max-width: 100%;
+      max-height: 100%;
+      aspect-ratio: 16 / 9;
+      flex: 0 1 auto;
     }
 
     rect {
@@ -89,42 +117,51 @@
     @media (max-width: 650px) {
       body {
         padding: 6px;
-        padding-bottom: 6px;
+        padding-top: max(6px, env(safe-area-inset-top));
+        padding-bottom: max(6px, env(safe-area-inset-bottom));
       }
 
       .top-bar {
-        gap: 10px;
-        padding: 10px 12px;
-        margin-bottom: 8px;
+        gap: 8px;
+        padding: 8px 10px;
+        margin-bottom: 6px;
+        border-radius: 9px;
       }
 
       .logo {
-        width: 118px;
-        max-width: 38vw;
+        width: clamp(68px, 23vw, 105px);
+        max-width: 25vw;
       }
 
       .title {
-        font-size: 1.9rem;
-        margin-bottom: 4px;
+        font-size: clamp(1.18rem, 6.3vw, 1.75rem);
+        margin-bottom: 2px;
       }
 
       .subtitle {
-        font-size: 0.86rem;
-        line-height: 1.15;
+        font-size: clamp(0.62rem, 2.9vw, 0.82rem);
+      }
+
+      .subtitle-desktop {
+        display: none;
+      }
+
+      .subtitle-mobile {
+        display: block;
       }
     }
 
     @media (max-width: 380px) {
       .logo {
-        width: 95px;
+        width: clamp(58px, 22vw, 84px);
       }
 
       .title {
-        font-size: 1.55rem;
+        font-size: clamp(1.05rem, 6vw, 1.45rem);
       }
 
       .subtitle {
-        font-size: 0.78rem;
+        font-size: clamp(0.58rem, 2.8vw, 0.72rem);
       }
     }
   </style>
@@ -136,13 +173,14 @@
   <img src="logo-tight.png" alt="ResusPro logo" class="logo">
   <div class="title-block">
     <h1 class="title">ResusBay</h1>
-    <div class="subtitle">Interactive equipment guide - click on items to review contents.</div>
+    <div class="subtitle subtitle-desktop">Interactive equipment guide - click on items to review contents.</div>
+    <div class="subtitle subtitle-mobile">Tap items to review contents.</div>
   </div>
 </header>
 
 <div class="container">
 
-  <svg viewBox="0 0 1920 1080" width="100%" height="100%">
+  <svg viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid meet">
 
     <image href="bay1.jpeg" width="1920" height="1080" x="0" y="0" />
 
